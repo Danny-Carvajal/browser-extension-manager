@@ -1,0 +1,328 @@
+:root {
+    --font-family: "Noto Sans", sans-serif;
+    --font-size-base: 16px;
+
+    --neutral-900: hsl(227, 75%, 14%);
+    --neutral-800: hsl(226, 25%, 17%);
+    --neutral-700: hsl(225, 23%, 24%);
+    --neutral-600: hsl(224, 11%, 37%);
+    --neutral-300: hsl(0, 0%, 78%);
+    --neutral-200: hsl(217, 61%, 90%);
+    --neutral-100: hsl(0, 0%, 93%);
+    --neutral-0: hsl(200, 60%, 100%);
+
+    --red-400: hsl(3, 86%, 64%);
+    --red-500: hsl(3, 71%, 56%);
+    --red-700: hsl(3, 77%, 44%);
+
+    --gradient-light: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+    --gradient-dark: linear-gradient(180deg, #040918 0%, #091540 100%);
+
+    --bg-gradient: var(--gradient-dark);
+    --bg-card: var(--neutral-800);
+    --text-main: var(--neutral-0);
+    --text-muted: var(--neutral-300);
+    --accent: var(--red-400);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background: var(--neutral-800);
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    margin: 1.5rem auto;
+    max-width: 900px;
+}
+
+.logo-text {
+    color: var(--neutral-0);
+    font-weight: 700;
+}
+
+
+
+body {
+    background: linear-gradient(180deg, #040918 0%, #091540 100%);
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    background: var(--bg-gradient);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.header {
+    background-color: hsl(226, 25%, 17%);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 1100px;
+    padding: 0.75rem 1.25rem;
+    margin: 2rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto 1rem;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo-text {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.theme-toggle {
+    all: unset;
+    background-color: var(--neutral-700);
+    border-radius: 8px;
+    padding: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, transform 0.2s ease;
+    box-shadow: none;
+    filter: none;
+}
+
+.theme-toggle:hover {
+    background-color: var(--neutral-600);
+    transform: rotate(15deg);
+    box-shadow: none;
+    filter: none;
+}
+
+.filters {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 0.8rem;
+}
+
+.filter-bar {
+    display: flex;
+    gap: 0.5rem;
+    margin: 2rem 0;
+}
+
+.filter-btn {
+    all: unset;
+    background-color: var(--neutral-700);
+    border: 1px solid var(--neutral-600);
+    color: var(--text-main);
+    padding: 0.4rem 1.2rem;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    font-weight: 500;
+}
+
+.filter-btn:active {
+    background-color: var(--accent);
+    color: white;
+}
+
+.filter-btn.active {
+    background-color: var(--accent);
+    color: white;
+}
+
+.filter-btn:hover {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: white;
+}
+
+.extensions-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1100px;
+    padding: 0 2rem;
+}
+
+.extensions-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.extension-card {
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    padding: 1.25rem;
+    border: 1px solid var(--neutral-600);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.extension-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+.extension-name {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.extension-description {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.extension-description {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 0.25rem;
+}
+
+.card-description {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.card-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.toggle-switch {
+    position: relative;
+    width: 36px;
+    height: 20px;
+    display: inline-block;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--neutral-600);
+    border-radius: 999px;
+    transition: 0.3s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.toggle-switch input:checked + .slider {
+    background-color: var(--accent);
+}
+
+.toggle-switch input:checked + .slider:before {
+    transform: translateX(16px);
+}
+
+.remove-btn {
+    background-color: transparent;
+    color: var(--neutral-0);
+    border: 1px solid var(--neutral-600);
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.remove-btn:hover {
+    background-color: var(--accent);
+    color: white;
+}
+
+body.light-mode .header{
+    background-color: var(--neutral-100);
+}
+
+body.light-mode {
+    background-color: var(--neutral-200);
+    color: var(--neutral-900);
+}
+
+body.light-mode .theme-toggle {
+    background-color: var(--neutral-200);
+}
+
+body,
+.extension-card,
+filter-btn {
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
