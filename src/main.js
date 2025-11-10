@@ -1,7 +1,7 @@
-import logoDark from "../assets/images/logo-dark.svg";
-import logoLight from "../assets/images/logo-light.png";
-import iconMoon from "../assets/images/icon-moon.svg";
-import iconSun from "../assets/images/icon-sun.svg";
+import logoDark from "./assets/images/logo-dark.svg";
+import logoLight from "./assets/images/logo-light.png";
+import iconMoon from "./assets/images/icon-moon.svg";
+import iconSun from "./assets/images/icon-sun.svg";
 
 document.addEventListener("DOMContentLoaded", () => {
   const themeToggle = document.querySelector(".theme-toggle");
