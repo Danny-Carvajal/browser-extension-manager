@@ -1,13 +1,340 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>vite-project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="./src/styles.css">
+    <title>Frontend Mentor | Browser extensions manager UI</title>
   </head>
+
+  <script>
+    if (localStorage.getItem("theme") === "light") {
+      document.documentElement.classList.add("light-mode");
+    }
+  </script>
+
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <div class="layout">
+      <header class="header">
+        <div class="header-left">
+            <img src="./assets/images/logo-light.png" alt="Logo" class="logo-wrapper" width="175" height="40">
+          </div>
+          <button class="theme-toggle theme-btn" aria-label="Toggle theme">
+            <img src="./assets/images/icon-sun.svg" alt="Sun-icon" class="theme-icon" width="50" height="50">
+          </button>  
+      </header>
+
+      <main class="main-content">
+        <section class="extensions-section">
+            <div class="section-header">
+              <h1 class="title">Extensions List</h1>
+              <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="inactive">Inactive</button>
+              </div>
+            </div>
+
+          <div class="extensions-container">
+
+            <div class="extension-card">
+              <div class="card-header">
+                <div class="icon-wrapper">
+                  <img src="./assets/images/logo-devlens.svg" alt="DevLens Logo" width="60" height="60">
+                </div>
+
+                <div class="card-info">
+                  <h3 class="card-title">DevLens</h3>
+                  <p class="card-description">
+                    Quickly inspect page layouts and visualize element boundaries.
+                  </p>
+                </div>
+              </div>
+
+              <div class="card-actions">
+                <button class="remove-btn">Remove</button>
+                <label class="toggle-switch">
+                  <input type="checkbox" checked>
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+
+
+            <div class="extension-card">
+              <div class="card-header">
+                <div class="icon-wrapper">
+                  <img src="./assets/images/logo-style-spy.svg" alt="DevLens Logo" width="60" height="60">
+                </div>
+
+                <div class="card-info">
+                  <h3 class="card-title">StyleSpy</h3>
+                  <p class="card-description">
+                    Instantly analyze and copy CSS from any webpage element.
+                  </p>
+                </div>
+              </div>
+
+              <div class="card-actions">
+                <button class="remove-btn">Remove</button>
+                <label class="toggle-switch">
+                  <input type="checkbox" checked>
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+
+
+            <div class="extension-card">
+              <div class="card-header">
+                <div class="icon-wrapper">
+                  <img src="./assets/images/logo-speed-boost.svg" alt="DevLens Logo" width="60" height="60">
+                </div>
+
+                <div class="card-info">
+                  <h3 class="card-title">SpeedBoost</h3>
+                  <p class="card-description">
+                    Optimizes browser resource usage to accelerate page loading.
+                  </p>
+                </div>
+              </div>
+
+              <div class="card-actions">
+                <button class="remove-btn">Remove</button>
+                <label class="toggle-switch">
+                  <input type="checkbox" checked>
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+
+
+            <div class="extension-card">
+              <div class="card-header">
+                <div class="icon-wrapper">
+                  <img src="./assets/images/logo-json-wizard.svg" alt="DevLens Logo" width="60" height="60">
+                </div>
+
+                <div class="card-info">
+                  <h3 class="card-title">JSONWizard</h3>
+                  <p class="card-description">
+                     Formats, validates, and prettifies JSON responses in-browser.
+                  </p>
+                </div>
+              </div>
+
+              <div class="card-actions">
+                <button class="remove-btn">Remove</button>
+                <label class="toggle-switch">
+                  <input type="checkbox" checked>
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+
+
+            <div class="extension-card">
+              <div class="card-header">
+                <div class="icon-wrapper">
+                  <img src="./assets/images/logo-tab-master-pro.svg" alt="DevLens Logo" width="60" height="60">
+                </div>
+
+                <div class="card-info">
+                  <h3 class="card-title">TabMaster Pro</h3>
+                  <p class="card-description">
+                    Organizes browser tabs into groups and sessions.
+                  </p>
+                </div>
+              </div>
+
+              <div class="card-actions">
+                <button class="remove-btn">Remove</button>
+                <label class="toggle-switch">
+                  <input type="checkbox" checked>
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+
+
+            <div class="extension-card">
+              <div class="card-header">
+                <div class="icon-wrapper">
+                  <img src="./assets/images/logo-viewport-buddy.svg" alt="DevLens Logo" width="60" height="60">
+                </div>
+
+                <div class="card-info">
+                  <h3 class="card-title">ViewportBuddy</h3>
+                  <p class="card-description">
+                    Simulates various screen resolutions directly within the browser.
+                  </p>
+                </div>
+              </div>
+
+              <div class="card-actions">
+                <button class="remove-btn">Remove</button>
+                <label class="toggle-switch">
+                  <input type="checkbox" checked>
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+            
+
+            <div class="extension-card">
+              <div class="card-header">
+                <div class="icon-wrapper">
+                  <img src="./assets/images/logo-markup-notes.svg" alt="Markup Notes Logo" width="60" height="60">
+                </div>
+
+                <div class="card-info">
+                  <h3 class="card-title">Markup Notes</h3>
+                  <p class="card-description">
+                   Enables annotation and notes directly onto webpages for collaborative debugging.
+                  </p>
+                </div>
+              </div>
+
+              <div class="card-actions">
+                <button class="remove-btn">Remove</button>
+                <label class="toggle-switch">
+                  <input type="checkbox" checked>
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+
+
+            <div class="extension-card">
+              <div class="card-header">
+                <div class="icon-wrapper">
+                  <img src="./assets/images/logo-grid-guides.svg" alt="Grid Guides Logo" width="60" height="60">
+                </div>
+                
+              <div class="card-info">
+                  <h3 class="card-title">GridGuides</h3>
+                  <p class="card-description">
+                    Overlay customizable grids and alignment guides on any webpage.
+                  </p>
+                </div>
+              </div>
+
+              <div class="card-actions">
+                <button class="remove-btn">Remove</button>
+                <label class="toggle-switch">
+                  <input type="checkbox" checked>
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+
+
+            <div class="extension-card">
+              <div class="card-header">
+                <div class="icon-wrapper">
+                  <img src="./assets/images/logo-palette-picker.svg" alt="Palette Picker Logo" width="60" height="60">
+                </div>
+
+               <div class="card-info">
+                  <h3 class="card-title">Palette Picker</h3>
+                  <p class="card-description">
+                    Instantly extracts color palettes from any webpage.
+                  </p>
+                </div>
+              </div>
+
+              <div class="card-actions">
+                <button class="remove-btn">Remove</button>
+                <label class="toggle-switch">
+                  <input type="checkbox" checked>
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+
+
+            <div class="extension-card">
+              <div class="card-header">
+                <div class="icon-wrapper">
+                  <img src="./assets/images/logo-link-checker.svg" alt="LinkChecker Logo" width="60" height="60">
+                </div>
+
+              <div class="card-info">
+                <h3 class="card-title">LinkChecker</h3>
+                  <p class="card-description">
+                   Scans and highlights broken links on any page.
+                  </p>
+                </div>
+              </div>
+
+              <div class="card-actions">
+                <button class="remove-btn">Remove</button>
+                <label class="toggle-switch">
+                  <input type="checkbox" checked>
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+
+
+            <div class="extension-card">
+              <div class="card-header">
+                <div class="icon-wrapper">
+                  <img src="./assets/images/logo-dom-snapshot.svg" alt="DOM Snapshot Logo" width="60" height="60">
+                </div>
+                
+              <div class="card-info">
+                  <h3 class="card-title">DOM Snapshot</h3>
+                  <p class="card-description">
+                    Capture and export DOM structures quickly.
+                  </p>
+                </div>
+              </div>
+
+              <div class="card-actions">
+                <button class="remove-btn">Remove</button>
+                <label class="toggle-switch">
+                  <input type="checkbox" checked>
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+
+
+            <div class="extension-card">
+              <div class="card-header">
+                <div class="icon-wrapper">
+                  <img src="./assets/images/logo-console-plus.svg" alt="ConsolePlus Logo" width="60" height="60">
+                </div>
+
+              <div class="card-info">
+                 <h3 class="card-title">ConsolePlus</h3>
+                  <p class="card-description">
+                    Enhanced developer console with advanced filtering and logging.
+                  </p>
+                </div>
+              </div>
+
+              <div class="card-actions">
+                <button class="remove-btn">Remove</button>
+                <label class="toggle-switch">
+                  <input type="checkbox" checked>
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+            
+          </div>
+        </section>
+      </main>
+
+      <script src="/src/main.js"></script>
+
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+        Coded by <a href="#">Danny</a>.
+      </div>
+    </div> 
   </body>
 </html>
